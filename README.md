@@ -3,3 +3,6 @@
 
 # Autor
 Karolina
+
+# Licencja
+MIT
