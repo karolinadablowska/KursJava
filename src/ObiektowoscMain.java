@@ -3,19 +3,14 @@ public class ObiektowoscMain {
         // deklaracja
         Samochod prywatny;
 
-        // alokacja
-        prywatny = new Samochod();
-        prywatny.marka = "Fiat";
-        prywatny.rokProdukcji = 1999;
-        prywatny.kolor = "czerwony";
-        prywatny.cena = 2222;
-
         // deklara i alokacja
         Samochod sluzbowy = new Samochod();
-        sluzbowy.marka = "Opel";
-        sluzbowy.rokProdukcji = 2000;
-        sluzbowy.cena = 100000;
+        sluzbowy.setMarka("Opel");
+        sluzbowy.setRokProdukcji(2000);
+        sluzbowy.setCena(100000);
 
+        // alokacja
+        prywatny = new Samochod("Fiat", "Czerwony", 1999, 2222);
 
         Samochod zony = prywatny;
 
@@ -23,14 +18,14 @@ public class ObiektowoscMain {
         prywatny.info();
         sluzbowy.info();
 
-        zony.kolor = "zielony";
+        zony.setKolor("zielony");
 
-        System.out.println("zony, marka: " + zony.marka);
-        System.out.println("zony, kolor: " + zony.kolor);
-        System.out.println("prywatny, marka: " + prywatny.marka);
-        System.out.println("prywatny, kolor: " + prywatny.kolor);
-        System.out.println("sluzbowy, marka: " + sluzbowy.marka);
-        System.out.println("sluzbowy, kolor: " + sluzbowy.kolor);
+        System.out.println("zony, marka: " + zony.getMarka());
+        System.out.println("zony, kolor: " + zony.getKolor());
+        System.out.println("prywatny, marka: " + prywatny.getMarka());
+        System.out.println("prywatny, kolor: " + prywatny.getKolor());
+        System.out.println("sluzbowy, marka: " + sluzbowy.getMarka());
+        System.out.println("sluzbowy, kolor: " + sluzbowy.getKolor());
 
 
         /******* wywołanie metody ****/
@@ -38,18 +33,61 @@ public class ObiektowoscMain {
         prywatny.uruchom();
         sluzbowy.uruchom();
 
-        prywatny.rokProdukcji = 1900;
+        prywatny.setRokProdukcji(1900);
 
         boolean czyPrywatnyJestZabytkiem = prywatny.czyJestZabytkiem();
         boolean czySluzbowyJestZabytkiem = sluzbowy.czyJestZabytkiem();
         System.out.println("czyPrywatnyJestZabytkiem: " + czyPrywatnyJestZabytkiem);
         System.out.println("czySluzbowyJestZabytkiem: " + czySluzbowyJestZabytkiem);
 
-        System.out.println("Jaka jest cena auta? " + prywatny.cena);
+        System.out.println("Jaka jest cena auta? " + prywatny.getCena());
         System.out.println("Jaka jest cena po rabacie 20%? " + prywatny.cenaPoRabacie(0.2));
 
-        System.out.println("Jaka jest cena auta? " + sluzbowy.cena);
+        System.out.println("Jaka jest cena auta? " + sluzbowy.getCena());
         System.out.println("Jaka jest cena po rabacie 90%? " + sluzbowy.cenaPoRabacie(0.9));
+
+        // przeciążenie metody
+        Math math = new Math();
+        System.out.println("2 + 2 = "+math.sum(2, 2));
+        System.out.println("2 + 2 + 4 + 5 = "+math.sum(2, 2, 4, 5));
+        System.out.println("2.34 + 2.43 = "+math.sum(2.34, 2.43));
+
+        // konstruktory
+        Samochod samochod1 = new Samochod();
+        Samochod samochod2 = new Samochod("Opel", 2010);
+        Samochod samochod3 = new Samochod("BMW", "granatowy", 2020, 999999);
+        samochod1.info();
+        samochod2.info();
+        samochod3.info();
+        samochod1.setMarka("Fiat");
+        samochod1.info();
+
+        // użycie this
+        Samochod samochod4 = new Samochod("Opel", 2010);
+        Samochod samochod5 = new Samochod("Mercedes", 2010);
+        samochod4.info();
+
+        // przekazywanie obiektów jako argumentu metody
+        Narzedzia narzedzia = new Narzedzia();
+        System.out.println("Czy równe? "+narzedzia.czyRowne(samochod1, samochod3));
+        System.out.println("Czy równe? "+narzedzia.czyRowne(samochod1, samochod1));
+        System.out.println("Czy równe? "+narzedzia.czyRowne(samochod4, samochod5));
+
+
+        // przekazywanie przez wartość i referencję
+        // typy proste
+        int liczba = 5;
+        System.out.println("Przed: "+liczba);
+        narzedzia.zwieksz(liczba);
+        System.out.println("Po: "+liczba);
+
+        Liczba liczbaObiekt = new Liczba();
+        liczbaObiekt.a = 5;
+        System.out.println("Przed: "+liczbaObiekt.a);
+        narzedzia.zwieksz(liczbaObiekt);
+        System.out.println("Po: "+liczbaObiekt.a);
+
+        // narzedzia.sum(1,1);
 
     }
 }
