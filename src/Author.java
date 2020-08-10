@@ -1,11 +1,16 @@
 public class Author {
+    private static int count = 0;
     private String name;
     private String surname;
 
     public Author(String name, String surname) {
         this.name = name;
         this.surname = surname;
+        count++;
+    }
 
+    public int getCount() {
+        return count;
     }
 
     public String getName() {
