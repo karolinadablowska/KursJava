@@ -41,16 +41,15 @@ public class ObiektowoscMain {
         System.out.println("czySluzbowyJestZabytkiem: " + czySluzbowyJestZabytkiem);
 
         System.out.println("Jaka jest cena auta? " + prywatny.getCena());
-        System.out.println("Jaka jest cena po rabacie 20%? " + prywatny.cenaPoRabacie(0.2));
+        System.out.println("Jaka jest cena po rabacie 20%? " + Utils.priceDicount(prywatny.getCena(), 0.2));
 
         System.out.println("Jaka jest cena auta? " + sluzbowy.getCena());
-        System.out.println("Jaka jest cena po rabacie 90%? " + sluzbowy.cenaPoRabacie(0.9));
+        System.out.println("Jaka jest cena po rabacie 90%? " + Utils.priceDicount(prywatny.getCena(), 0.9));
 
         // przeciążenie metody
-        Math math = new Math();
-        System.out.println("2 + 2 = "+math.sum(2, 2));
-        System.out.println("2 + 2 + 4 + 5 = "+math.sum(2, 2, 4, 5));
-        System.out.println("2.34 + 2.43 = "+math.sum(2.34, 2.43));
+        System.out.println("2 + 2 = "+Math.sum(2, 2));
+        System.out.println("2 + 2 + 4 + 5 = "+Math.sum(2, 2, 4, 5));
+        System.out.println("2.34 + 2.43 = "+Math.sum(2.34, 2.43));
 
         // konstruktory
         Samochod samochod1 = new Samochod();
@@ -88,6 +87,17 @@ public class ObiektowoscMain {
         System.out.println("Po: "+liczbaObiekt.a);
 
         // narzedzia.sum(1,1);
+
+        //
+        Author author1 = new Author("Marian", "B");
+        Book book1 = new Book("It", "6677888", author1, 222);
+        System.out.println(author1.getCount());
+        System.out.println("Jaka jest cena po rabacie 90%? " + Utils.priceDicount(book1.getPrice(), 0.9));
+
+        Author author2 = new Author("Jurek", "B");
+        Book book2 = new Book("The Pickwick Papers", "667888", author2, 22.3);
+        System.out.println(author2.getCount());
+        System.out.println("Jaka jest cena po rabacie 90%? " + Utils.priceDicount(book2.getPrice(), 0.9));
 
     }
 }

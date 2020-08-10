@@ -40,12 +40,6 @@ class Samochod {
         return czyZabytek;
     }
 
-    // coś zwraca, coś przyjmuje
-    // założenie jest takie, że rabat jest w formie 0,1 -> 10%
-    double cenaPoRabacie(double rabat){
-        return cena - (cena * rabat);
-    }
-
     void info(){
         System.out.println("-------- samochod --------");
         System.out.println("marka: "+marka);

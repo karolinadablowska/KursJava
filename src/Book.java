@@ -3,11 +3,13 @@ public class Book {
     private String isbn;
     private boolean borrow;
     private Author author;
+    private double price;
 
-    public Book(String name, String isbn, Author author) {
+    public Book(String name, String isbn, Author author, double price) {
         this.name = name;
         this.isbn = isbn;
         this.author = author;
+        this.price = price;
     }
 
     public String getName() {
@@ -40,6 +42,10 @@ public class Book {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public double getPrice() {
+        return price;
     }
 
     public void getInfo() {
