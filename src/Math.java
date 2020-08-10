@@ -1,5 +1,7 @@
 class Math {
 
+    private static final double PI = 3.14;
+
     static int sum(int a, int b){
         return a+b;
     }

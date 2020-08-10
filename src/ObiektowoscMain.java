@@ -99,5 +99,7 @@ public class ObiektowoscMain {
         System.out.println(author2.getCount());
         System.out.println("Jaka jest cena po rabacie 90%? " + Utils.priceDicount(book2.getPrice(), 0.9));
 
+
+        System.out.println("Adres WP: "+Properties.URL_TO_WP);
     }
 }
