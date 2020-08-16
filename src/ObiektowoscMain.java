@@ -101,5 +101,15 @@ public class ObiektowoscMain {
 
 
         System.out.println("Adres WP: "+Properties.URL_TO_WP);
+        
+         int [] table = {5, 6, 4, 3};
+
+        System.out.println(Utils.validatePesel("930929042"));
+        System.out.println(Utils.validateEmail("karolinadablowska@hotmail.com"));
+        System.out.println(Utils.generateNumbes(20, 0, 50));
+        System.out.println(Utils.isEven(table));
+        System.out.println(Utils.contains(table, 0));
+        System.out.println(Utils.nwd(130,20));
+        
     }
 }
