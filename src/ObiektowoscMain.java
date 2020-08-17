@@ -110,6 +110,20 @@ public class ObiektowoscMain {
         System.out.println(Utils.isEven(table));
         System.out.println(Utils.contains(table, 0));
         System.out.println(Utils.nwd(130,20));
+
+        // przekazywanie zmiennej liczby argumentów
+        int suma = Math.sum(2, 5, 2, 3, 5);
+        suma = Math.sum(2);
+        suma = Math.sum(2, 5, 2);
+        suma = Math.sum(2, 5, 2, 23, 23, 23);
+        int[] numbers = {2, 5, 2, 3, 5};
+        suma = Math.sum();
+        suma = Math.sum(numbers);
+
+        System.out.println("Suma liczb: 2, 5, 2, 3, 5=" +suma);
+
+        Utils.dispalyIndex("Marek", 1, 3, 5, 2, 3, 4, 4);
+        Utils.dispalyIndex("Kasia", 1, 4, 4);
         
     }
 }

@@ -2,13 +2,14 @@
 import java.util.Arrays;
 import java.util.Random;
 import java.util.regex.Pattern;
+import java.lang.Math;
 
 public class Utils {
 
     static double priceDicount(double price, double discount) {
         return price - (price * discount);
     }
-    
+
     //metoda przyjmuje pesel i sprawdza czy jest poprawny. Poprawny jest wtedy gdy jego d³ugoœæ jest równa 11 oraz wszystkie znaki to cyfry. Wykorzystaj Integer.parseInt();
     static boolean validatePesel(String pesel) {
         for (int i = 0; i < pesel.length(); i++) {
@@ -21,12 +22,12 @@ public class Utils {
         }
         return false;
     }
-    
-     //validateEmail - metoda przyjmuje email i sprawdza czy jest poprawny. Eemail musi posiadaæ znak @ oraz po ma³pie musi byæ tekst a potem kropka i znowu tekst. Uzyj macher oraz regex.
+
+    //validateEmail - metoda przyjmuje email i sprawdza czy jest poprawny. Eemail musi posiadaæ znak @ oraz po ma³pie musi byæ tekst a potem kropka i znowu tekst. Uzyj macher oraz regex.
     //https://www.samouczekprogramisty.pl/wyrazenia-regularne-w-jezyku-java/
     static boolean validateEmail(String mail) {
         Pattern pattern = Pattern.compile(".+@.+\\.com.");
-        if (pattern.matcher(mail).matches()){
+        if (pattern.matcher(mail).matches()) {
             return true;
         }
         return false;
@@ -45,13 +46,13 @@ public class Utils {
     }
 
     //contains - metoda przyjmuje tablicê wartoœci oraz pojedyncz¹ wartoœæ do poszukania w tablicy. Metoda zwraca informacjê czy istnieje lub nie istnieje podana wartoœæ w podanej tablicy.
-    static boolean contains(int [] table, int number) {
-        for (int i = 0; i <table.length; i++) {
-            if(table[i] == number) {
+    static boolean contains(int[] table, int number) {
+        for (int i = 0; i < table.length; i++) {
+            if (table[i] == number) {
                 return true;
             }
         }
-    return false;
+        return false;
     }
 
 
@@ -64,19 +65,26 @@ public class Utils {
         }
         return false;
     }
+
     // nwd - dla podanych dwóch liczb metoda zwraca najwiêkszy wspólny dzielnik
     public static int nwd(int firstNumber, int secondNumber) {
         while (firstNumber != secondNumber) {
             if (firstNumber > secondNumber) {
                 firstNumber = firstNumber - secondNumber;
-            }
-            else {
+            } else {
                 secondNumber = secondNumber - firstNumber;
-                }
             }
-            return firstNumber;
         }
-
+        return firstNumber;
     }
+
+    public static void dispalyIndex(String name, int ... values){
+        System.out.println("Name: "+name);
+        for(int value : values){
+            System.out.print(value+", ");
+        }
+        System.out.println();
+    }
+}
 
 
