@@ -1,3 +1,5 @@
+package pl.karolina;
+
 import java.util.Scanner;
 
 public class Library {

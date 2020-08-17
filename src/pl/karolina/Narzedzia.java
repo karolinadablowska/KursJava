@@ -1,3 +1,5 @@
+package pl.karolina;
+
 public class Narzedzia {
 
     boolean czyRowne(Samochod a, Samochod b){

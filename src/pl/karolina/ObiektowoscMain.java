@@ -1,3 +1,5 @@
+package pl.karolina;
+
 public class ObiektowoscMain {
     public static void main(String[] args) {
         // deklaracja

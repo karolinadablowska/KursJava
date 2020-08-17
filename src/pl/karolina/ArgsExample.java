@@ -1,3 +1,5 @@
+package pl.karolina;
+
 public class ArgsExample {
 
     public static void main(String[] args) {

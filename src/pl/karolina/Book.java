@@ -1,3 +1,5 @@
+package pl.karolina;
+
 public class Book {
     private String name;
     private Isbn isbn;

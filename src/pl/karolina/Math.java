@@ -1,3 +1,5 @@
+package pl.karolina;
+
 class Math {
 
     private static final double PI = 3.14;
