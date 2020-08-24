@@ -37,7 +37,7 @@ public class Utils {
         Random random = new Random();
         int[] numbers = new int[howMany];
         for (int i = 0; i < howMany; i++) {
-            numbers[i] = min + (int) (Math.random() * ((max - min) + 1));
+            numbers[i] = min + (int) (java.lang.Math.random() * ((max - min) + 1));
         }
 
         return Arrays.toString(numbers);
