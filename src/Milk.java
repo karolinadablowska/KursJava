@@ -21,7 +21,6 @@ public class Milk extends Product {
 
     public void getInfo() {
         System.out.println(getName() + ", " + getexpireDate());
-
     }
 }
 

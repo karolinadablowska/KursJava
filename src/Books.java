@@ -1,9 +1,9 @@
 public class Books extends Product {
 
-        private Author author;
+        private Authors author;
 
 
-        Books(String name, double price, int amount, Author author) {
+        Books(String name, double price, int amount, Authors author) {
             super(name, price, amount);
             this.author = author;
         }

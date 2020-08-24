@@ -47,7 +47,6 @@ public class Product {
 
     public void getInfo() {
         System.out.println("Product is: " + name + ", " + price + ", " + amount + ", ");
-
     }
 
 }
