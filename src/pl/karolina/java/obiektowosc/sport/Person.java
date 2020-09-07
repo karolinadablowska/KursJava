@@ -1,4 +1,4 @@
-package Sport;
+package pl.karolina.java.obiektowosc.sport;
 
 import java.time.LocalDate;
 import java.time.Period;

@@ -1,4 +1,4 @@
-package Sport;
+package pl.karolina.java.obiektowosc.sport;
 
 import Sport.Coach;
 import Sport.FootballPlayer;
