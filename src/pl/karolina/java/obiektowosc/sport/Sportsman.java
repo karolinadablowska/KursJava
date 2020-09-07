@@ -1,8 +1,8 @@
 package pl.karolina.java.obiektowosc.sport;
 
-import Sport.Coach;
-import Sport.FootballPlayer;
-import Sport.Person;
+import pl.karolina.java.obiektowosc.sport.Coach;
+import pl.karolina.java.obiektowosc.sport.FootballPlayer;
+import pl.karolina.java.obiektowosc.sport.Person;
 
 import java.time.LocalDate;
 
@@ -13,6 +13,7 @@ abstract class Sportsman extends Person {
     private FootballPlayer.Club club;
     private Coach coach;
 
+    public Sportsman(){ super(); }
 
     Sportsman(String name, String surname, LocalDate birthDate, String diet, LocalDate startOfCareer, FootballPlayer.Club club, Coach coach) {
         super(name, surname, birthDate);

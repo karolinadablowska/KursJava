@@ -7,6 +7,8 @@ public class Swimmer extends Sportsman {
     private String style;
     private double bestTime;
 
+    public Swimmer() { super(); }
+
     Swimmer(String name, String surname, LocalDate birthDate, String diet, LocalDate startOfCareer, FootballPlayer.Club club, Coach coach, String style, double bestTime) {
         super(name, surname, birthDate, diet, startOfCareer, club, coach);
         this.style = style;

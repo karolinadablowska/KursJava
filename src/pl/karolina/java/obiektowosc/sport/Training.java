@@ -4,23 +4,19 @@ import java.time.LocalDateTime;
 
 public class Training {
 
-    private String Sportsman;
-    private String Coach;
-    private String FootballPlayer;
-    private String Runner;
-    private String Swimmer;
+    private Sportsman[] sportsmans;
+    private Coach Coach;
     private LocalDateTime time;
 
-    public Training(String sportsman, String coach, String footballPlayer, String runner, String swimmer, LocalDateTime time) {
-        this.Sportsman = sportsman;
-        this.Coach = coach;
-        this.FootballPlayer = footballPlayer;
-        this.Runner = runner;
-        this.Swimmer = swimmer;
+    public Training(Sportsman[] sportsmans, Coach coach, LocalDateTime time) {
+        this.sportsmans = sportsmans;
+        Coach = coach;
         this.time = time;
-
     }
 
-
-
+    void train() {
+        for (Sportsman sportsman : sportsmans){
+            System.out.println(sportsman.train());
+        }
+    }
 }

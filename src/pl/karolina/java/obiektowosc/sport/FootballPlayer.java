@@ -6,6 +6,8 @@ public class FootballPlayer extends Sportsman {
 
     private String position;
 
+    FootballPlayer(){super();}
+
     FootballPlayer(String name, String surname, LocalDate birthDate, String diet, LocalDate startOfCareer, Club club, Coach coach, String position) {
         super(name, surname, birthDate, diet, startOfCareer, club, coach);
         this.position = position;

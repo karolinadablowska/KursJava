@@ -1,6 +1,7 @@
 package pl.karolina.java.obiektowosc.sport;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,9 +12,29 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<Person> persons = new ArrayList<Person>(5);
+        Coach c1 = new Coach("Bartek", "K", LocalDate.of(1998, 2, 5), 2500, "Bayern");
         persons.add(new Person("Basia", "kkkkk", LocalDate.of(1996, 02, 25)));
         persons.add(new Person("Kasia", "hhhhh", LocalDate.of(2000, 01, 16)));
-        persons.add(new Coach("Bartek", "K", LocalDate.of(1998, 2, 5), 2500, "Bayern"));
+        persons.add(c1);
+
+
+        Sportsman s1 = new Runner();
+        Sportsman s2 = new Swimmer();
+        Sportsman s3 = new Runner();
+        Sportsman s4 = new FootballPlayer();
+        Sportsman s5 = new Runner();
+        Sportsman s6 = new FootballPlayer();
+        Sportsman s7 = new Runner();
+        Sportsman s8 = new Runner();
+        Sportsman s9 = new FootballPlayer();
+
+        Sportsman[] sportsmens = {s1, s2, s3, s4, s5, s6, s7, s8, s9};
+
+
+        Training training = new Training(sportsmens, c1, LocalDateTime.now());
+        training.train();
+
+
 
         System.out.println("Your list: ");
         for (Person p : persons) {
