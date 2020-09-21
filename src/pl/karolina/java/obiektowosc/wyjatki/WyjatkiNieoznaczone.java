@@ -17,7 +17,7 @@ public class WyjatkiNieoznaczone {
 
             int wynik = a / b;
             System.out.println(a + "/" + b + "=" + wynik);
-        } catch (ArithmeticException e) {
+        } catch (ArithmeticException dfjklasfd) {
             System.out.print("Sory, nie mogę dzielić przez 0.");
         } catch (NoSuchElementException e) {
             System.out.print("Podałeś niepoprawny format. Oczekuję liczby całkowitej.");
