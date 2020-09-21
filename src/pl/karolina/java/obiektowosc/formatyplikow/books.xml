@@ -1,0 +1,18 @@
+<!-- element, atrybut -->
+<books>
+    <book>
+        <id>1</id>
+        <title>ABC</title>
+        <author>Jurek</author>
+    </book>
+    <book>
+        <id>2</id>
+        <title>ZZZ</title>
+        <author>Stefek</author>
+    </book>
+    <book>
+        <id>3</id>
+        <title>ADSFAA</title>
+        <author>Anna</author>
+    </book>
+</books>
