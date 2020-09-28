@@ -1,0 +1,13 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+ 
+  <groupId>pl.karolina</groupId>
+  <artifactId>kursjava</artifactId>
+  <version>1.0.0</version>
+  
+  <properties>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+  </properties>
+  
+</project>
