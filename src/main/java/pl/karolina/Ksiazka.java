@@ -8,4 +8,8 @@ public class Ksiazka {
         this.tytul = tytul;
         this.autor = autor;
     }
+
+    public String getTytul() {
+        return tytul;
+    }
 }
