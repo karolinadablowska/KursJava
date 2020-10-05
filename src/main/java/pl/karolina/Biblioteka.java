@@ -1,8 +1,10 @@
 package pl.karolina;
 
+import java.util.Arrays;
+
 public class Biblioteka {
     private int iterator = 0;
-    Ksiazka[] ksiazki = new Ksiazka[10];
+    private Ksiazka[] ksiazki = new Ksiazka[10];
 
     public Biblioteka(){}
 
@@ -44,5 +46,12 @@ public class Biblioteka {
             }
         }
         return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Biblioteka{" +
+                "ksiazki=" + Arrays.toString(ksiazki) +
+                '}';
     }
 }

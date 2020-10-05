@@ -24,4 +24,12 @@ public class Ksiazka {
     public void setAutor(String autor) {
         this.autor = autor;
     }
+
+    @Override
+    public String toString() {
+        return "Ksiazka{" +
+                "tytul='" + tytul + '\'' +
+                ", autor='" + autor + '\'' +
+                '}';
+    }
 }
