@@ -1,13 +1,13 @@
 package pl.karolina;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BibliotekaTest {
 
     @Test
@@ -25,6 +25,7 @@ public class BibliotekaTest {
         assertEquals(1,ileKsiazek);
     }
 
+    @Order(1)
     @Test
     public void poszukajKsiazkeTest(){
         // given
@@ -55,6 +56,7 @@ public class BibliotekaTest {
         assertNull(ksiazka);
     }
 
+    @Order(2)
     @ParameterizedTest(name = "Ksiazka o nazwie {0}, nie istenieje")
     @CsvSource({ "JKASdfjla", "ADKFA", "Nie istniejaca"	})
     public void poszukajKsiazkeKtoraNieIstniejeTest(String tytulKsiazki){
