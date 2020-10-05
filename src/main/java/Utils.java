@@ -9,7 +9,7 @@ public class Utils {
         return price - (price * discount);
     }
     
-    //metoda przyjmuje pesel i sprawdza czy jest poprawny. Poprawny jest wtedy gdy jego d³ugoœæ jest równa 11 oraz wszystkie znaki to cyfry. Wykorzystaj Integer.parseInt();
+    //metoda przyjmuje pesel i sprawdza czy jest poprawny. Poprawny jest wtedy gdy jego dï¿½ugoï¿½ï¿½ jest rï¿½wna 11 oraz wszystkie znaki to cyfry. Wykorzystaj Integer.parseInt();
     static boolean validatePesel(String pesel) {
         for (int i = 0; i < pesel.length(); i++) {
             if (pesel.length() == 11) {
@@ -22,7 +22,7 @@ public class Utils {
         return false;
     }
     
-     //validateEmail - metoda przyjmuje email i sprawdza czy jest poprawny. Eemail musi posiadaæ znak @ oraz po ma³pie musi byæ tekst a potem kropka i znowu tekst. Uzyj macher oraz regex.
+     //validateEmail - metoda przyjmuje email i sprawdza czy jest poprawny. Eemail musi posiadaï¿½ znak @ oraz po maï¿½pie musi byï¿½ tekst a potem kropka i znowu tekst. Uzyj macher oraz regex.
     //https://www.samouczekprogramisty.pl/wyrazenia-regularne-w-jezyku-java/
     static boolean validateEmail(String mail) {
         Pattern pattern = Pattern.compile(".+@.+\\.com.");
@@ -32,7 +32,7 @@ public class Utils {
         return false;
     }
 
-    // metoda przyjmuje informacjê ile liczb ma wygenerowaæ i w jakim zakresie. Metoda zwraca tablicê z wygenerowanymi liczbami.
+    // metoda przyjmuje informacjï¿½ ile liczb ma wygenerowaï¿½ i w jakim zakresie. Metoda zwraca tablicï¿½ z wygenerowanymi liczbami.
     static String generateNumbes(int howMany, int min, int max) {
         Random random = new Random();
         int[] numbers = new int[howMany];
@@ -44,7 +44,7 @@ public class Utils {
 
     }
 
-    //contains - metoda przyjmuje tablicê wartoœci oraz pojedyncz¹ wartoœæ do poszukania w tablicy. Metoda zwraca informacjê czy istnieje lub nie istnieje podana wartoœæ w podanej tablicy.
+    //contains - metoda przyjmuje tablicï¿½ wartoï¿½ci oraz pojedynczï¿½ wartoï¿½ï¿½ do poszukania w tablicy. Metoda zwraca informacjï¿½ czy istnieje lub nie istnieje podana wartoï¿½ï¿½ w podanej tablicy.
     static boolean contains(int [] table, int number) {
         for (int i = 0; i <table.length; i++) {
             if(table[i] == number) {
@@ -55,7 +55,7 @@ public class Utils {
     }
 
 
-    //isEven - metoda otrzymuje tablicê liczb i sprawdza, czy wszystkie wartoœci w tej tablicy s¹ parzyste
+    //isEven - metoda otrzymuje tablicï¿½ liczb i sprawdza, czy wszystkie wartoï¿½ci w tej tablicy sï¿½ parzyste
     static boolean isEven(int[] table) {
         for (int i = 0; i < table.length; i++) {
             if (table[i] % 2 == 0) {
@@ -64,7 +64,7 @@ public class Utils {
         }
         return false;
     }
-    // nwd - dla podanych dwóch liczb metoda zwraca najwiêkszy wspólny dzielnik
+    // nwd - dla podanych dwï¿½ch liczb metoda zwraca najwiï¿½kszy wspï¿½lny dzielnik
     public static int nwd(int firstNumber, int secondNumber) {
         while (firstNumber != secondNumber) {
             if (firstNumber > secondNumber) {
