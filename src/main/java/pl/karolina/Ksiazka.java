@@ -12,4 +12,8 @@ public class Ksiazka {
     public String getTytul() {
         return tytul;
     }
+
+    public String getAutor() {
+        return autor;
+    }
 }

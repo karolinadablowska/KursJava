@@ -8,13 +8,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class BibliotekaTest {
 
+
+    Biblioteka biblioteka = new Biblioteka();
+
+    @Order(3)
     @Test
     @DisplayName("Dodaj jedną książkę.")
     public void dodajJednaKsiazkeTest(){
-        // given
-        Biblioteka biblioteka = new Biblioteka();
         Ksiazka ksiazka = new Ksiazka("Kompendium programisty Java.", "Jurek Nowak");
         biblioteka.dodajKsiazke(ksiazka);
 
@@ -23,6 +26,19 @@ public class BibliotekaTest {
 
         //then
         assertEquals(1,ileKsiazek);
+    }
+
+    @Order(4)
+    @Test
+    public void dodajKolejnaJednaKsiazkeTest(){
+        Ksiazka ksiazka = new Ksiazka("Bezpieczeństwo aplikacji webowych.", "Jurek Nowak");
+        biblioteka.dodajKsiazke(ksiazka);
+
+        // when
+        int ileKsiazek = biblioteka.ileKsiazek();
+
+        //then
+        assertEquals(2,ileKsiazek);
     }
 
     @Order(1)
