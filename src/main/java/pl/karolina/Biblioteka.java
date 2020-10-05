@@ -18,9 +18,28 @@ public class Biblioteka {
         return iterator;
     }
 
+    public void zmienTytulKsiazki(String obecnyTytul, String nowyTytul) {
+        Ksiazka ksiazka = poszukajKsiazke(obecnyTytul);
+        ksiazka.setTytul(nowyTytul);
+    }
+
     public Ksiazka poszukajKsiazke(String tytulKsiazki) {
         for(int i = 0; i < ksiazki.length && ksiazki[i] != null; i++){
             if(ksiazki[i].getTytul().equals(tytulKsiazki)){
+                return ksiazki[i];
+            }
+        }
+        return null;
+    }
+
+    public void zmienAutora(String obecnyAutor, String nowyAutor) {
+        Ksiazka ksiazka = poszukajKsiazkePoAutorze(obecnyAutor);
+        ksiazka.setAutor(nowyAutor);
+    }
+
+    public Ksiazka poszukajKsiazkePoAutorze(String nazwaAutora) {
+        for(int i = 0; i < ksiazki.length && ksiazki[i] != null; i++){
+            if(ksiazki[i].getAutor().equals(nazwaAutora)){
                 return ksiazki[i];
             }
         }

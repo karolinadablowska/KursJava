@@ -13,7 +13,15 @@ public class Ksiazka {
         return tytul;
     }
 
+    public void setTytul(String tytul) {
+        this.tytul = tytul;
+    }
+
     public String getAutor() {
         return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 }
