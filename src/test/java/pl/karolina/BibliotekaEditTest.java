@@ -22,7 +22,7 @@ public class BibliotekaEditTest {
     }
 
     @Test
-    public void edytujTytulKsiazki(){
+    public void edytujAutoraKsiazki(){
         // given
         Ksiazka k1 = new Ksiazka("Kompendium programisty Java.", "Jurek Nowak");
         Ksiazka[] ksiazki = {k1};
