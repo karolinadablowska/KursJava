@@ -11,6 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 public class Pojazd {
     private String nazwa;
+    private double cena;
 
     public void uruchom(){
         System.out.println("Jadę.");

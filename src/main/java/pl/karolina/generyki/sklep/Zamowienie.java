@@ -1,5 +1,7 @@
 package pl.karolina.generyki.sklep;
 
+import pl.karolina.generyki.Lista;
+
 import java.time.LocalDate;
 
 public class Zamowienie {

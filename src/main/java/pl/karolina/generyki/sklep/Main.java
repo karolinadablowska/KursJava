@@ -1,5 +1,7 @@
 package pl.karolina.generyki.sklep;
 
+import pl.karolina.generyki.Lista;
+
 public class Main {
     public static void main(String[] args) {
         Klient k1 = new Klient("Marek");

@@ -1,7 +1,10 @@
-package pl.karolina.generyki.sklep;
+package pl.karolina.generyki;
+
+import lombok.Getter;
 
 import java.util.Arrays;
 
+@Getter
 public class Lista<T> {
     private T[] wartosci;
 
