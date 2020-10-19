@@ -25,5 +25,14 @@ public class Main {
 
         System.out.println(listaKlientowGeneryk);
         System.out.println(listaKomputerowGeneryk);
+
+        Klient k5 = new Klient("Jurek");
+        Generator.wyswietl(k5);
+        Sprzedawca s1 = new Sprzedawca("Sprzedawca");
+        Generator.wyswietl(s1);
+
+        Zamowienie z = new Zamowienie(listaKlientowGeneryk);
+        z.zamow();
+
     }
 }
