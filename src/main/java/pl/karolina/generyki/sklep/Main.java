@@ -19,7 +19,6 @@ public class Main {
         Lista<Klient> listaKlientowGeneryk = new Lista<Klient>(k1, k2, k3);
         Lista<Komputer> listaKomputerowGeneryk = new Lista<Komputer>(komp1, komp2, komp3);
 
-
         System.out.println(listaKlientowGeneryk);
 
         Klient k4 = new Klient("Przemek");
