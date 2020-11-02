@@ -1,4 +1,4 @@
-package pl.karolina.kolekcje.list;
+package pl.karolina.kolekcje.list.ksiegarnia;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

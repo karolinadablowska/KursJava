@@ -1,5 +1,7 @@
 package pl.karolina.kolekcje.list;
 
+import pl.karolina.kolekcje.list.ksiegarnia.Ksiazka;
+
 import java.util.ArrayList;
 import java.util.List;
 
