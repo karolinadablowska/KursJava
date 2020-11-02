@@ -12,4 +12,8 @@ public class Ksiegarnia {
     public void add(Ksiazka ksiazka) {
         ksiazki.add(ksiazka);
     }
+
+    public void remove(Ksiazka ksiazka) {
+        ksiazki.remove(ksiazka);
+    }
 }

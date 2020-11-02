@@ -33,4 +33,5 @@ public class KsiegarniaTest {
         // then
         assertTrue(ksiegarnia.getKsiazki().isEmpty());
     }
+    
 }
