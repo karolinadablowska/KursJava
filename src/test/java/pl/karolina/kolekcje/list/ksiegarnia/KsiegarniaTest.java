@@ -2,8 +2,7 @@ package pl.karolina.kolekcje.list.ksiegarnia;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class KsiegarniaTest {
 
@@ -33,5 +32,21 @@ public class KsiegarniaTest {
         // then
         assertTrue(ksiegarnia.getKsiazki().isEmpty());
     }
-    
+
+    @Test
+    public void poszukajKsiazke(){
+        // given
+        Ksiegarnia ksiegarnia = new Ksiegarnia();
+        Ksiazka ksiazka1 = new Ksiazka("ABC");
+        ksiegarnia.add(ksiazka1);
+        Ksiazka ksiazka2 = new Ksiazka("ZAC");
+        ksiegarnia.add(ksiazka2);
+
+        // when
+        Ksiazka ksiazka3 = ksiegarnia.find(ksiazka1);
+
+        // then
+        assertEquals(ksiazka1, ksiazka3);
+    }
+
 }
