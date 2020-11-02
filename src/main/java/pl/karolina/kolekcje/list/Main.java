@@ -1,4 +1,4 @@
-package pl.karolina.kolekcje;
+package pl.karolina.kolekcje.list;
 
 import java.util.ArrayList;
 import java.util.List;
