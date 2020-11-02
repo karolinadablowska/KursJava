@@ -16,4 +16,13 @@ public class Ksiegarnia {
     public void remove(Ksiazka ksiazka) {
         ksiazki.remove(ksiazka);
     }
+
+    public Ksiazka find(Ksiazka ksiazka1) {
+        for(Ksiazka ksiazka : ksiazki){
+            if(ksiazka.equals(ksiazka1)){
+                return ksiazka;
+            }
+        }
+        return null;
+    }
 }

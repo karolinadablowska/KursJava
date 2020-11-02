@@ -49,4 +49,21 @@ public class KsiegarniaTest {
         assertEquals(ksiazka1, ksiazka3);
     }
 
+    @Test
+    public void poszukajNieistniejacaKsiazke(){
+        // given
+        Ksiegarnia ksiegarnia = new Ksiegarnia();
+        Ksiazka ksiazka1 = new Ksiazka("ABC");
+        ksiegarnia.add(ksiazka1);
+        Ksiazka ksiazka2 = new Ksiazka("ZAC");
+        ksiegarnia.add(ksiazka2);
+
+        // when
+        Ksiazka ksiazka3 = new Ksiazka("ZZZ");
+        Ksiazka ksiazka4 = ksiegarnia.find(ksiazka3);
+
+        // then
+        assertNull(ksiazka4);
+    }
+
 }
